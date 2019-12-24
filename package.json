@@ -1,6 +1,6 @@
 {
-  "name": "api",
-  "description": "",
+  "name": "feathersjs-next-mongodb",
+  "description": "Feathers NextJs and Mongodb Boilerplate",
   "version": "0.0.1",
   "homepage": "",
   "main": "api",
@@ -8,8 +8,8 @@
     "feathers"
   ],
   "author": {
-    "name": "Tamal Dey",
-    "email": "tdey@mcftech.com"
+    "name": "@tamal3053",
+    "email": "tamal.nemesis@gmail.com"
   },
   "contributors": [],
   "bugs": {},
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "yarn run eslint && yarn run jest",
-    "eslint": "eslint api/. test/. --config .eslintrc.json",
+    "start": "nodemon api/ && next ./client",
     "api:dev": "nodemon api/",
     "api:start": "node api/",
     "api:jest": "jest  --forceExit",

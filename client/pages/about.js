@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import AppContext from '../store/AppContext';
 import {LAYOUT} from '../store/Actions';
 import Menu from '../compontents/Menu';
@@ -9,6 +9,6 @@ export default () => {
 
   return <div>
     <Menu/>
-    <p>Welcome to the next.js! Your theme is {layout.theme}</p>
+    <p>About us Page {layout.theme}</p>
   </div>;
 }
