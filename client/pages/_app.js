@@ -1,17 +1,14 @@
 import React from 'react';
+import App from 'next/app';
 import StoreProvider from '../store/StoreProvider';
 
-/**
- * Extends Next/App to Provide the Store to this app.
- * @param Component
- * @param pageProps
- * @returns {*}
- * @constructor
- */
-export default function ThiApp({Component, pageProps}) {
-  return (
-    <StoreProvider>
+class ThisApp extends App {
+  render() {
+    const {Component, pageProps} = this.props;
+    return <StoreProvider>
       <Component {...pageProps} />
-    </StoreProvider>
-  );
+    </StoreProvider>;
+  }
 }
+
+export default ThisApp;

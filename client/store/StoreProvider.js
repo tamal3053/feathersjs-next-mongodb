@@ -1,10 +1,11 @@
 import React from 'react';
 import AppContext from './AppContext';
 import StoreReducer from './StoreReducer';
-import {LAYOUT} from './Actions';
+import {LAYOUT, TOKEN} from './Actions';
 
 const contextProps = {
-  [LAYOUT] : {
+  [TOKEN]: null,
+  [LAYOUT]: {
     theme: 'dark'
   }
 };

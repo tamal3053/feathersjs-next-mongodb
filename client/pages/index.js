@@ -1,12 +1,13 @@
 import React from 'react';
 import AppContext from '../store/AppContext';
-import {LAYOUT} from '../store/Actions';
+import {LAYOUT, USER} from '../store/Actions';
 import Menu from '../compontents/Menu';
 import Layout from '../compontents/Layout';
 import Head from 'next/dist/next-server/lib/head';
 
 export default () => {
   const {state, dispatch} = React.useContext(AppContext);
+  console.log('Index State', state);
   const layout = state[LAYOUT];
 
   return <Layout>
@@ -16,6 +17,6 @@ export default () => {
     </Head>
 
     <Menu/>
-    <p>Welcome to the next.js! Your theme is {layout.theme}</p>
+    <p>Welcome to the next.js! Your theme is</p>
   </Layout>;
 }
