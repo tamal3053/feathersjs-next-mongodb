@@ -25,6 +25,25 @@ export default class AuthService {
 
   }
 
+  register(name, email, password, strategy = 'local') {
+
+    // Get a token and user
+    return this.fetch(`${this.domain}/users`, {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+        strategy
+      })
+    }).then(res => {
+      this.setToken(res.accessToken);
+      this.setProfile(res.user);
+      return Promise.resolve(res);
+    });
+
+  }
+
   loggedIn() {
     // Checks if there is a saved token and it's still valid
     const token = this.getToken();
@@ -48,8 +67,10 @@ export default class AuthService {
   }
 
   getToken() {
-    // Retrieves the user token from localStorage
-    return localStorage.getItem('this_token');
+    if(typeof(Storage) !== "undefined") {
+      // Retrieves the user token from localStorage
+      return localStorage.getItem('this_token');
+    }
   }
 
   logout() {
