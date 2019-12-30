@@ -1,6 +1,7 @@
 ## FeathersJs + NextJs + MongoDB - Mongoose Boilerplate
 
-User `yarn start` to spin the dev server which includes `FeathersJs` and `NextJs`. Check other commands in package.json file.
+Use `yarn start` to spin the dev server which includes `FeathersJs` and `NextJs`. Check other commands in package.json file.
+Use `docker-compose up -d` to start MongoDb docker container.
 ___
 
 Uses React Contextual API and Hooks for state management. 
@@ -15,6 +16,3 @@ Uses React Contextual API and Hooks for state management.
 ##### Redirects
 - Login user redirect to `"/"` details on `client/pages/auth/login.js`
 
-##TODO
-
-- withAuth - to conditionally serve pages that required authentication.

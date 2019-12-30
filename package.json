@@ -68,5 +68,6 @@
     "watch": [
       "api/**/*.js"
     ]
-  }
+  },
+  "license": "MIT"
 }
